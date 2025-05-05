@@ -1,7 +1,7 @@
 
 # Image Segmentation Project
 > Team Members:
-Name	Roll Number	Email
+Name	Roll Number	
 Sholwyn 4SO22CD050
 Sruthi  4SO22CD053
 Yash    4SO22CD063
