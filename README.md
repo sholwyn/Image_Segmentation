@@ -3,7 +3,7 @@
 
 ## Overview
 
-This project implements image segmentation with a focus on detecting **butterflies** using **K-means clustering** and **edge detection** techniques. The system processes butterfly images to segment important visual regions, visualize the results, and evaluate the segmentation using performance metrics like **PSNR**, **SSIM**, **mIoU**, and more.
+This project implements image segmentation with a focus on detecting **hemorrhagic regions** using **K-means clustering** and **edge detection** techniques. The system processes **medical images** to segment hemorrhagic areas, visualize the results, and evaluate the segmentation using performance metrics like **PSNR**, **SSIM**, **mIoU**, and more.
 
 The main techniques used in this project include:
 
@@ -15,8 +15,8 @@ The main techniques used in this project include:
 
 ## Features
 
-* Preprocesses butterfly images for enhanced feature extraction.
-* Detects edges and segments important regions in butterfly images.
+* Preprocesses medical images for enhanced feature extraction.
+* Detects edges and segments hemorrhagic regions in medical images.
 * Evaluates segmentation quality using various metrics.
 * Visualizes results in both **2D** and **3D** formats.
 * Supports **real-time segmentation** for input images.
@@ -39,5 +39,3 @@ Install all dependencies using:
 ```bash
 pip install -r requirements.txt
 ```
-
----
