@@ -1,30 +1,66 @@
 
 # Image Segmentation Project
+> Team Members:
+Name	Roll Number	Email
+Sholwyn 4SO22CD050
+Sruthi  4SO22CD053
+Yash    4SO22CD063
 
-## Overview
+> Problem Statement:
+The goal of this project is to automatically detect and segment brain tumors from MRI scans using digital image processing (DIP) techniques and machine learning-based segmentation methods. The aim is to improve the visibility of tumors for diagnosis and treatment planning.
 
-This project implements image segmentation with a focus on detecting **hemorrhagic regions** using **K-means clustering** and **edge detection** techniques. The system processes **medical images** to segment hemorrhagic areas, visualize the results, and evaluate the segmentation using performance metrics like **PSNR**, **SSIM**, **mIoU**, and more.
+> Techniques & Program Flow:
+## Original Image Loading:
 
-The main techniques used in this project include:
+Input: MRI brain scan images (grayscale or color).
 
-* **Preprocessing** with **CLAHE** (Contrast Limited Adaptive Histogram Equalization) and **bilateral filtering**.
-* **Edge Detection** using **Sobel** and **Canny** methods.
-* **Feature Extraction** using **Local Binary Pattern (LBP)**.
-* **Segmentation** using **K-means clustering**.
-* **Performance Metrics** evaluation such as **SSIM**, **PSNR**, **mIoU**, **Dice Coefficient**, **Sensitivity**, **Specificity**, and **Hausdorff Distance**.
+Purpose: Serve as the baseline for all processing steps.
 
-## Features
+## CLAHE Enhancement:
 
-* Preprocesses medical images for enhanced feature extraction.
-* Detects edges and segments hemorrhagic regions in medical images.
-* Evaluates segmentation quality using various metrics.
-* Visualizes results in both **2D** and **3D** formats.
-* Supports **real-time segmentation** for input images.
+Technique: Contrast Limited Adaptive Histogram Equalization.
 
-## Requirements
+Purpose: Enhances local contrast to make tumor boundaries clearer.
 
-To run this project, install the following dependencies:
+## Edge Detection:
 
+Technique: Canny or Sobel Edge Detector.
+
+Purpose: Detects the edges within the brain to highlight boundaries of tissues and tumors.
+
+## HOG Feature Extraction:
+
+Technique: Histogram of Oriented Gradients.
+
+Purpose: Captures texture and gradient features helpful in identifying structural differences.
+
+## K-means Clustering:
+
+Technique: Unsupervised clustering (k=2 or 3).
+
+Purpose: Segments the image into different clusters (tumor vs. non-tumor).
+
+## Random Forest Segmentation:
+
+Technique: Supervised machine learning (Random Forest Classifier).
+
+Purpose: Learns from labeled data to improve segmentation accuracy.
+
+## Watershed Segmentation:
+
+Technique: Watershed Algorithm.
+
+Purpose: Refines object boundaries by detecting contours and segmenting overlapping regions.
+
+## Final Segmentation Mask:
+
+Combination: The best segmentation outputs are combined into a binary mask for tumor regions.
+
+## Overlay and Visualization:
+
+Technique: Color mask overlay (red/green) using OpenCV or Matplotlib.
+
+Purpose: Highlights tumor regions on top of the original MRI scan for clear visualization.
 * Python 3.x
 * OpenCV
 * NumPy
